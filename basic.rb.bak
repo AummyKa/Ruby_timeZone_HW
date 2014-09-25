@@ -1,0 +1,26 @@
+require 'sinatra'
+
+get '/' do
+	"Hello World!"
+	end
+
+get '/about' do
+	"There is something about me"
+	end 
+
+get '/hello/:name' do
+	"Hello, how are you,"
+	 "Hello #{params[:name]}!"
+
+end
+
+get '/form' do
+	puts "What's country"
+	erb :form
+end
+post '/form' do
+	
+	
+	firstname = params[:message]
+	"hey, form is work,#{first_name}!"
+end
